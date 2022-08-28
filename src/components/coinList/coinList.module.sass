@@ -1,0 +1,174 @@
+$navy-blue: #0066FF
+$black-pearl: #10161D
+$grey-chateau: #A4A6A8
+$dark-black-pearl: #0D1115
+$raven: #757677
+$black-russian: #1B202A
+$tangerine-yellow: #FFCC01
+$dodger-blue: #0075FF
+$light-slate-grey: #7D8593
+$alice-blue: #F3F5F8
+$dark-pastel-green: #00A82F
+$red-orange: #F22C2C
+
+.coinListContainer
+    .coinList
+        margin: 0 0 100px 0
+        padding: 0
+        list-style: none
+        color: tomato
+        overflow-x: auto
+        &::-webkit-scrollbar
+            height: 8px
+            background-color: #1B202A
+
+        &::-webkit-scrollbar-thumb
+                background: #f3f5f845
+                border-radius: 10px
+            
+    
+        .coinListRow
+            margin-bottom: 20px
+            margin-top: 8px
+            display: flex
+            width: 100%
+            &:first-child
+                margin-top: 0px
+            .thItem
+                //border: 1px solid yellow
+                min-width: 160px
+                color: $alice-blue
+                opacity: 0.5 
+                text-transform: uppercase
+                font-size: 12px
+                font-weight: 400
+                padding: 10px 5px
+                display: flex
+                justify-content: flex
+                align-items: center
+                overflow-wrap: break-word
+                &:first-child
+                    min-width: 310px
+                div
+                    margin-left: 10px
+                    p
+                        margin-bottom: 0px
+                        //background-color: #1B202A
+                        background-color: $black-russian
+                        border-radius: 8px
+                        padding: 2px
+                        button
+                            border: none
+                            outline: none
+                            color: white
+                            opacity: 0.5
+                            font-size: 12px
+                            font-weight: 500
+                            background-color: $black-russian
+                            margin-left: 5px
+                            &:last-child
+                                margin-right: 5px
+                            &:active,&:focus
+                                outline: 2px solid $navy-blue
+                                border-radius: 4px
+                svg
+                    width: 50%
+            .tdItem
+                //border: 1px solid white
+                background-color: $black-russian
+                min-width: 160px
+                color: $alice-blue
+                padding: 15px 5px 10px 5px
+                &:first-child
+                    min-width: 310px
+                    border-radius: 8px 0px 0px 8px;
+                &:last-child
+                    //min-width: 220px
+                    //border: 1px solid green
+                    border-radius: 0px 8px 8px 0px;
+                .col_first
+                    //border: 1px solid green
+                    width: 100%
+                    display: flex
+                    //justify-content: space-between
+                    .avatar_wrapper
+                        margin-left: 15px
+                        //border: 1px solid green
+                        width: 42px
+                        min-width: 41px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        img
+                            width: 100%
+                    .content_wrapper
+                        //border: 1px solid red
+                        width: calc(100% - 42px)
+                        margin-left: 25px
+                        .title_wrapper
+                            font-weight: 500px
+                            color: $alice-blue
+                            .main_title
+                                width: 100%
+                                font-size: 16px
+                                margin-right: 20px
+                            .sub_title
+                                width: 100%
+                                font-size: 12px
+                                opacity: 0.25 
+                        .body_wrapper
+                            display: flex
+                            font-size: 12px
+                            font-weight: 300
+                            .status_detail_box1
+                                color: $dark-pastel-green
+                                margin-right: 15px
+                                min-width: 65px
+                                svg
+                                    font-size: 20px
+                                    margin: 2px 0 0 0
+                                
+                                
+                            .status_detail_box2
+                                color: $red-orange
+                                min-width: 75px
+                                svg
+                                    font-size: 20px
+                                    margin: 0 0 4px 0
+                               
+                            .status_detail_box1, .status_detail_box2
+                                display: flex
+                                justify-content: space-between
+                                align-items: center
+                                span
+                                    &:nth-child(2)
+                                        color: $alice-blue
+                                        opacity: 0.25 
+
+                .col_second
+                    span
+                        font-size: 16px
+                        font-weight: 400
+
+                .col_third
+                    img
+                        min-width: 16px
+
+                .col_fourth
+                    span
+                        font-size: 16px
+                        font-weight: 400
+                        color: $navy-blue
+                        
+                .col_fifth
+                    img
+                        min-width: 36px
+
+                .col_col_sixth
+                    span
+                        font-size: 16px
+                        font-weight: 400
+
+                .col_seventh
+                    img
+                        min-width: 74px

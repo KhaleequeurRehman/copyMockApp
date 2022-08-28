@@ -1,0 +1,37 @@
+$black-pearl: #10161D
+$grey-chateau: #A4A6A8
+$dark-black-pearl: #0D1115
+
+.navcontainer
+    nav
+        padding-top: 15px
+        font-size: 14px
+        background-color: $black-pearl !important
+        div>a,div>a:hover,div>a:focus,div>a:active
+            color: $grey-chateau !important
+        div>a>a,div>a>a:hover,div>a>a:focus,div>a>a:active
+            color: $grey-chateau
+            text-decoration: none
+        
+        button
+            border: none
+            outline: none
+            &:focus
+                box-shadow: none
+        form
+            position: relative
+            svg
+                position: absolute
+                top: 9px
+                left: 20px
+                color: #A4A6A8
+                opacity: 0.6
+                cursor: pointer
+            input[type="search"]
+                background-color: $dark-black-pearl
+                color: $grey-chateau
+                box-shadow: none
+                border: none
+                outline: none
+                border-radius: 8px
+                margin-left: -3px

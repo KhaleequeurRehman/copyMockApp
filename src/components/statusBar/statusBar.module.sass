@@ -1,0 +1,158 @@
+$navy-blue: #0066FF
+$black-pearl: #10161D
+$grey-chateau: #A4A6A8
+$dark-black-pearl: #0D1115
+$raven: #757677
+$black-russian: #1B202A
+$tangerine-yellow: #FFCC01
+$dodger-blue: #0075FF
+$light-slate-grey: #7D8593
+$alice-blue: #F3F5F8
+$dark-pastel-green: #00A82F
+$red-orange: #F22C2C
+
+
+.statusBar
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .statusBarColumnsWrapper
+        //color: white
+        width: 100%
+        background-color: $black-russian
+        border-radius: 8px
+        padding: 4px 0px
+        margin-top: 10px
+        display: flex
+        .statusBarCol1
+            width: 120px
+            padding: 6px 10px
+            color: white
+            border-right: 1px solid rgba(243, 245, 248, 0.25)
+            span
+                svg
+                    padding-right: 16px
+                img
+                    padding-right: 10px
+            .statusText
+                font-size: 12px
+                font-weight: 600
+                //padding-right: 10px
+
+        .statusBarCol2
+            width: calc(100% - 120px)
+            display: flex
+            align-items: center
+            justify-content: space-around
+            .statusBarListItem
+                font-size: 12px
+                font-weight: 500
+                color: $grey-chateau
+                .statusBarlistItemNumber
+                    padding-right: 5px
+                .statusBarlistItemText
+                    color: white
+                    padding-right: 5px
+                    text-transform: uppercase
+                .statusBarlistItemIconAndPercentage
+                    font-size: 10px
+                    font-weight: 300
+                    color: $dark-pastel-green 
+                    svg
+                        padding-right: 3px
+                        vertical-align: text-bottom
+                &:nth-child(1)
+                    .statusBarlistItemNumber
+                        color: $navy-blue
+                    .statusBarlistItemText
+                        color: $navy-blue
+                &:nth-child(3)
+                    .statusBarlistItemNumber
+                        color: $tangerine-yellow
+                    .statusBarlistItemText
+                        color: $tangerine-yellow
+
+.redText
+    color: $red-orange !important
+.ms5
+    margin-left: 5px !important
+
+@media only screen and (min-width: "993px")
+    .statusBar
+        .statusBarColumnsWrapper
+            margin-top: 0px
+            width: 48.5%
+
+//@media only screen and (max-width: "550px")
+@media only screen and (min-width: "426px") and (max-width: "576px")
+    .statusBar
+        .statusBarColumnsWrapper
+            .statusBarCol1
+                width: 43px
+                span
+                    svg
+                        padding-right: 0px
+                        min-width: 18px
+                    img
+                        padding-right: 0px
+                        min-width: 22px
+                .statusText
+                    display: none
+            .statusBarCol2
+                width: 100%
+                .statusBarListItem
+                    font-size: 10px
+                    &:last-child
+                        display: none
+                    .statusBarlistItemIconAndPercentage
+                        display: none
+
+//@media only screen and (max-width: "426px")
+@media only screen and (min-width: "375px") and (max-width: "426px")
+    .statusBar
+        .statusBarColumnsWrapper
+            .statusBarCol1
+                width: 43px
+                span
+                    svg
+                        padding-right: 0px
+                        min-width: 18px
+                    img
+                        padding-right: 0px
+                        min-width: 22px
+                .statusText
+                    display: none
+            .statusBarCol2
+                width: 100%
+                .statusBarListItem
+                    font-size: 10px
+                    &:last-child
+                        display: none
+                    .statusBarlistItemIconAndPercentage
+                        display: none
+
+                        
+//@media only screen and (max-width: "375px")
+@media only screen and (min-width: "0px") and (max-width: "375px")
+     .statusBar
+        .statusBarColumnsWrapper
+            .statusBarCol1
+                width: 43px
+                span
+                    svg
+                        padding-right: 0px
+                        min-width: 18px
+                        font-size: 12px
+                    img
+                        padding-right: 0px
+                        min-width: 22px
+                .statusText
+                    display: none
+            .statusBarCol2
+                width: 100%
+                .statusBarListItem
+                    font-size: 8px
+                    &:last-child
+                        display: none
+                    .statusBarlistItemIconAndPercentage
+                        display: none
