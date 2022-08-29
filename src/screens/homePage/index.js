@@ -4,7 +4,7 @@ import cn from "classnames";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import MainContent from "../../components/mainContent";
-import styles from "./homePage.module.sass";
+// import styles from "./homePage.module.sass";
 
 const index = () => {
   return (

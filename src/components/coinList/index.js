@@ -1,12 +1,12 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./coinList.module.sass";
-import Table from "react-bootstrap/Table";
+// import Table from "react-bootstrap/Table";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp, faCaretDown, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
+// import ButtonGroup from "react-bootstrap/ButtonGroup";
+// import Button from "react-bootstrap/Button";
+// import Badge from "react-bootstrap/Badge";
 import avatarone from "../../assets/images/avatarone.png"
 import chainIcon from "../../assets/images/chainIcon.png"
 import riskRatingIcon from "../../assets/images/riskRatingIcon.png"

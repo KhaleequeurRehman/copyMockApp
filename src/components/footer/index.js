@@ -4,8 +4,8 @@ import styles from "./footer.module.sass";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import List from "../list";
 import {listItemArr1,listItemArr2,listItemArr3,titleText1,titleText2,titleText3} from '../../constants'
 

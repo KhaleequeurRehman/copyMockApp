@@ -1,11 +1,11 @@
 import React from "react";
 import cn from "classnames";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 import styles from "./statusBar.module.sass";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretUp, faCircleInfo, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCaretUp, faStar } from "@fortawesome/free-solid-svg-icons";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 import dIconYellow from "../../assets/images/dIconYellow.png";
 import vector from "../../assets/images/vector.png";
