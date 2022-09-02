@@ -32,6 +32,9 @@ $red-orange: #F22C2C
             margin-top: 8px
             display: flex
             width: 100%
+            background-color: $black-russian
+            border-radius: 8px
+            justify-content: space-between
             &:first-child
                 margin-top: 0px
             .thItem
@@ -48,7 +51,7 @@ $red-orange: #F22C2C
                 align-items: center
                 overflow-wrap: break-word
                 &:first-child
-                    min-width: 310px
+                    min-width: 330px
                 div
                     margin-left: 10px
                     p
@@ -80,7 +83,7 @@ $red-orange: #F22C2C
                 color: $alice-blue
                 padding: 15px 5px 10px 5px
                 &:first-child
-                    min-width: 310px
+                    min-width: 330px
                     border-radius: 8px 0px 0px 8px;
                 &:last-child
                     //min-width: 220px
@@ -103,7 +106,7 @@ $red-orange: #F22C2C
                             width: 100%
                     .content_wrapper
                         //border: 1px solid red
-                        width: calc(100% - 42px)
+                        min-width: calc(100% - 42px)
                         margin-left: 25px
                         .title_wrapper
                             font-weight: 500px
@@ -120,6 +123,15 @@ $red-orange: #F22C2C
                             display: flex
                             font-size: 12px
                             font-weight: 300
+                            .status_badge
+                                min-width: 75px
+                                font-weight: 400
+                                font-size: 14px
+                                color: $alice-blue
+                                background-color: $navy-blue
+                                border-radius: 5px
+                                padding: 0px 8px
+                                margin-top: 2px
                             .status_detail_box1
                                 color: $dark-pastel-green
                                 margin-right: 15px
@@ -149,10 +161,17 @@ $red-orange: #F22C2C
                     span
                         font-size: 16px
                         font-weight: 400
+                        margin-left: 10px
+
 
                 .col_third
                     img
                         min-width: 16px
+                    svg
+                        margin: 0px 0 0px 8px
+                        font-size: 13px
+                        color: $alice-blue
+                        opacity: 0.5
 
                 .col_fourth
                     span
@@ -163,6 +182,9 @@ $red-orange: #F22C2C
                 .col_fifth
                     img
                         min-width: 36px
+                    //img + img
+                        min-width: 22px
+                        margin-left: 6px
 
                 .col_col_sixth
                     span

@@ -9,13 +9,227 @@ import riskRatingIcon from "../../assets/images/riskRatingIcon.png"
 import SevenDVolIcon from "../../assets/images/SevenDVolIcon.png"
 import fishIcon from "../../assets/images/fishIcon.png"
 import vector2 from "../../assets/images/vector2.png"
+import colthreeimgone from "../../assets/images/colthreeimgone.png"
 
-const CoinList = ({ColsData,screen, rowsData}) => {
+// const rowsData = [
+//   {
+//     col1avatarPath: "avatartwo.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "Doge",
+//     subTitle: "DOGE",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+//   {
+//     col1avatarPath: "avatarthree.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "Elon",
+//     subTitle: "ELON",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+//   {
+//     col1avatarPath: "avatarfour.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "Bart's Farm Frens",
+//     subTitle: "BFFS",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+//   {
+//     col1avatarPath: "avatarfive.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "Yagiverse Genesis",
+//     subTitle: "YGGN",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+//   {
+//     col1avatarPath: "avatarsix.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "MetalCore Infantry Genesis",
+//     subTitle: "MCIG",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+//   {
+//     col1avatarPath: "avatarseven.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "Art Not Real",
+//     subTitle: "ANRL",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+//   {
+//     col1avatarPath: "avatareight.png",
+//     col3imgPath: "colthreeimgone.png",
+//     mainTitle: "PG: JIRAVERSE",
+//     subTitle: "PGJS",
+//     percentageText1: "80.5%",
+//     percentageText2: "-10.4%",
+//     col7imgPath: "colsevenimgtwo.png",
+//   },
+// ]
+
+const rowsData = [
+  {
+    col1avatarPath: "avatartwo.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgtwo.png",
+    mainTitle: "Doge",
+    subTitle: "DOGE",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarthree.png",
+    col3imgPath: "colthreeimgtwo.png",
+    col7imgPath: "colsevenimgthree.png",
+    mainTitle: "Elon",
+    subTitle: "ELON",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarfour.png",
+    col3imgPath: "colthreeimgthree.png",
+    col7imgPath: "colsevenimgfour.png",
+    mainTitle: "Bart's Farm Frens",
+    subTitle: "BFFS",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarfive.png",
+    col3imgPath: "colthreeimgtwo.png",
+    col7imgPath: "colsevenimgfifth.png",
+    mainTitle: "Yagiverse Genesis",
+    subTitle: "YGGN",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarsix.png",
+    col3imgPath: "colthreeimgtwo.png",
+    col7imgPath: "colsevenimgsixth.png",
+    mainTitle: "MetalCore Infantry Genesis",
+    subTitle: "MCIG",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarseven.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgseventh.png",
+    mainTitle: "Art Not Real",
+    subTitle: "ANRL",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatareight.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgeight.png",
+    mainTitle: "PG: JIRAVERSE",
+    subTitle: "PGJS",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarnine.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgnine.png",
+    mainTitle: "Tycoon Tigers Club",
+    subTitle: "TTCB",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatartenth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgtenth.png",
+    mainTitle: "Cosmic Trippies",
+    subTitle: "CSTS",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatareleventh.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgeleventh.png",
+    mainTitle: "BoredAIClub",
+    subTitle: "BAIC",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatartwelevth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgtwelevth.png",
+    mainTitle: "Moonthers NFT",
+    subTitle: "MNFT",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarthirteenth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgthirteenth.png",
+    mainTitle: "ThunderBuddiez",
+    subTitle: "TDBZ",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarfourteenth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgfourteenth.png",
+    mainTitle: "Surf The Kali Yuga 42",
+    subTitle: "SK42",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarfifteenth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgtfifteenth.png",
+    mainTitle: "0xTheSaudis Official",
+    subTitle: "0xSO",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarsixteenth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgsixteenth.png",
+    mainTitle: "Superful - Superuser Genesis Pass",
+    subTitle: "SSGP",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+  {
+    col1avatarPath: "avatarseventeenth.png",
+    col3imgPath: "colthreeimgone.png",
+    col7imgPath: "colsevenimgone.png",
+    mainTitle: "BozzCatz",
+    subTitle: "BZCT",
+    percentageText1: "80.5%",
+    percentageText2: "-10.4%",
+  },
+]
+
+const CoinList = ({ColsData,screen}) => {
   return (
     <>
       <div className={cn(styles.coinListContainer)}>
         <ul className={cn(styles.coinList)}>
-          <li className={cn(styles.coinListRow)} style={{backgroundColor: "transparent"}}>
+          <li className={cn(styles.coinListRow)}>
             {
               ColsData && ColsData.map((currentItem,i) => (
                 i===0? (
@@ -563,35 +777,4 @@ const CoinList = ({ColsData,screen, rowsData}) => {
 };
 
 export default CoinList;
-
-
-  /* <th>
-                <span>Coin</span>
-                <div>
-                  <span>
-                    <Badge bg="secondary">1H</Badge>
-                  </span>
-                  <span>
-                    <Badge bg="secondary">24H</Badge>
-                  </span>
-                </div>
-              </th>
-              <th>
-                <span>Price</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Chain</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Market cap</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Risk Rating</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Volume</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>7d Vol</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th> */
 

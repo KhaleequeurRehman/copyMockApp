@@ -1,6 +1,5 @@
 import React from "react";
 import cn from "classnames";
-// import styles from "./header.module.sass";
 import Navbar from "../navbar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

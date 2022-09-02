@@ -1,8 +1,5 @@
 import React from "react";
 import cn from "classnames";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
 import styles from "./statusBar.module.sass";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp, faStar } from "@fortawesome/free-solid-svg-icons";

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import styles from "./mainContent.module.sass";
-// import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import MainContentTitle from "../mainContentTitle";
@@ -10,8 +9,18 @@ import { mainContentTitle1 } from "../../constants";
 import StatusBar from "../statusBar";
 
 const MainContent = () => {
-  const { titleHeadingTextBlue, titleHeadingTextWhite, titleSubHeadingText } =
-    mainContentTitle1;
+  const [mainContentTitleData, setMainContentTitleData] = useState(mainContentTitle1.desktop)
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth < 576) {
+        setMainContentTitleData(mainContentTitle1.mobile)
+    } 
+    else {
+        setMainContentTitleData(mainContentTitle1.desktop)
+    }
+  }
+  window.addEventListener("resize", handleResize)
+}, [mainContentTitleData])
 
   return (
     <>
@@ -19,9 +28,9 @@ const MainContent = () => {
         <Row className={cn("px-0 mx-0")}>
           <Col className={cn("px-0 mx-0 col-11 mx-auto")}>
             <MainContentTitle
-              titleHeadingTextWhite={titleHeadingTextWhite}
-              titleHeadingTextBlue={titleHeadingTextBlue}
-              titleSubHeadingText={titleSubHeadingText}
+              titleHeadingTextWhite={mainContentTitleData.titleHeadingTextWhite}
+              titleHeadingTextBlue={mainContentTitleData.titleHeadingTextBlue}
+              titleSubHeadingText={mainContentTitleData.titleSubHeadingText}
             />
           </Col>
         </Row>

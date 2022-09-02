@@ -10,12 +10,13 @@ import SevenDVolIcon from "../../assets/images/SevenDVolIcon.png"
 import fishIcon from "../../assets/images/fishIcon.png"
 import vector2 from "../../assets/images/vector2.png"
 
-const CoinList = ({ColsData,screen, rowsData}) => {
+
+const CoinList = ({ColsData,screen}) => {
   return (
     <>
       <div className={cn(styles.coinListContainer)}>
         <ul className={cn(styles.coinList)}>
-          <li className={cn(styles.coinListRow)} style={{backgroundColor: "transparent"}}>
+          <li className={cn(styles.coinListRow)}>
             {
               ColsData && ColsData.map((currentItem,i) => (
                 i===0? (
@@ -198,7 +199,7 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                 </li>
             </> 
             : screen === 4? 
-             <>
+            // <>
                   <li className={cn(styles.coinListRow)}>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_first)}>
@@ -254,7 +255,7 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                     </div>
                   </div>
               </li>
-             </> 
+            // </> 
             : ""
           }
           {/* first row for desktop 2 start from here */}
@@ -428,79 +429,13 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                   </div>
               </li> */}
 
-            {
-              rowsData.map((v,i) => (
-                <>
-                  <li key={i} className={cn(styles.coinListRow)}>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_first)}>
-                          <div className={cn(styles.avatar_wrapper)}>
-                            <img src={require(`../../assets/images/${v.col1avatarPath}`)} alt="avatarpic" />
-                          </div>
-                          <div className={cn(styles.content_wrapper)}>
-                            <div className={cn(styles.title_wrapper)}>
-                              <span className={cn(styles.main_title)}>{v.mainTitle}</span>
-                              <span className={cn(styles.sub_title)}>{v.subTitle}</span>
-                            </div>
-                            <div className={cn(styles.body_wrapper)}>
-                              <div className={cn(styles.status_detail_box1)}>
-                                <FontAwesomeIcon icon={faCaretUp} />
-                                <span>1H</span>
-                                <span>{v.percentageText1}</span>
-                              </div>
-                              <div className={cn(styles.status_detail_box2)}>
-                                <FontAwesomeIcon icon={faCaretDown} />
-                                <span>24H</span>
-                                <span>{v.percentageText2}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_second)}>
-                          <span>0.11$</span>
-                        </div>
-                      </div>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_third)}>
-                        <img src={require(`../../assets/images/${v.col3imgPath}`)} alt="chainIcon" />
-                            <FontAwesomeIcon icon={faEllipsisVertical}  />
-                        </div>
-                      </div>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_fourth)}>
-                          <span>10 M</span>
-                        </div>
-                      </div>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_fifth)}>
-                          <img src={riskRatingIcon} alt="riskRatingIcon" />
-                        </div>
-                      </div>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_sixth)}>
-                          <span>2.4K</span>
-                        </div>
-                      </div>
-                      <div className={cn(styles.tdItem)}>
-                        <div className={cn(styles.col_seventh)}>
-                          <img src={require(`../../assets/images/${v.col7imgPath}`)} alt="col7imgPath" />
-                        </div>
-                      </div>
-                  </li>
-                </>
-              ))
-            }
-
-
-          {/* {Array.from({ length: 6 }).map((_, index) => (
+          {Array.from({ length: 3 }).map((_, index) => (
             <>
               <li key={index} className={cn(styles.coinListRow)}>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_first)}>
                       <div className={cn(styles.avatar_wrapper)}>
-                        <img src={require(`../../assets/images/${rowsData.col1avatarPath}`)} alt="avatarpic" />
+                        <img src={avatarone} alt="avatarpic" />
                       </div>
                       <div className={cn(styles.content_wrapper)}>
                         <div className={cn(styles.title_wrapper)}>
@@ -555,7 +490,7 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                   </div>
               </li>
             </>
-          ))} */}
+          ))}
         </ul>
       </div>
     </>
@@ -563,35 +498,3 @@ const CoinList = ({ColsData,screen, rowsData}) => {
 };
 
 export default CoinList;
-
-
-  /* <th>
-                <span>Coin</span>
-                <div>
-                  <span>
-                    <Badge bg="secondary">1H</Badge>
-                  </span>
-                  <span>
-                    <Badge bg="secondary">24H</Badge>
-                  </span>
-                </div>
-              </th>
-              <th>
-                <span>Price</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Chain</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Market cap</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Risk Rating</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Volume</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>7d Vol</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th> */
-
