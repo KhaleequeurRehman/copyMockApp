@@ -28,9 +28,9 @@ const NavbarCmp = () => {
               />
             </Form>
             <Nav className="ms-auto me-md-5">
-              <Nav.Link><Link to="#Tokens">Tokens</Link></Nav.Link>
-              <Nav.Link><Link to="#Miners">Miners</Link></Nav.Link>
-              <Nav.Link><Link to="#NFT">NFT</Link></Nav.Link>
+              <Nav.Link><Link to="/">Tokens</Link></Nav.Link>
+              <Nav.Link><Link to="/desktop3">Miners</Link></Nav.Link>
+              <Nav.Link><Link to="/desktop4">NFT</Link></Nav.Link>
               <Nav.Link><Link to="#Contactus">Contact us</Link></Nav.Link>
             </Nav>
             <Form className="d-sm-none">

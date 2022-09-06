@@ -74,7 +74,7 @@ const listItemArr1 = [
   ];
   const titleText3 = "Solutions";
 
-  const mainContentTitle1 = {
+  const mainContentTitle2 = {
   desktop: { 
     titleHeadingTextWhite: "Trending Crypto Currencies",
     titleHeadingTextBlue: "by Volume",
@@ -87,7 +87,7 @@ const listItemArr1 = [
   },
   }
 
-  const mainContentTitle2 = {
+  const mainContentTitle3 = {
     desktop: { 
       titleHeadingTextWhite: "Top Miners",
       titleHeadingTextBlue: "by TVL",
@@ -100,7 +100,7 @@ const listItemArr1 = [
     },
   }
 
-  const mainContentTitle3 = {
+  const mainContentTitle4 = {
     desktop: { 
       titleHeadingTextWhite: "Upcoming",
       titleHeadingTextBlue: "Miners",
@@ -113,7 +113,7 @@ const listItemArr1 = [
     },
   }
 
-  const filterButtonOneText = {
+  const filterButtonTwoText = {
   desktop: {
     btn1Text: "All",
     btn2Text: "Upcoming",
@@ -123,7 +123,7 @@ const listItemArr1 = [
     btn2Text: "Upcoming",
   }
   }
-  const filterButtonTwoText = {
+  const filterButtonThreeText = {
     desktop: {
       btn1Text: "All",
       btn2Text: "Upcoming",
@@ -133,7 +133,7 @@ const listItemArr1 = [
       btn2Text: "Upcoming",
     }
   }
-  const filterButtonThree = {
+  const filterButtonFourText = {
     desktop: {
       btn1Text: "All",
       btn2Text: "Upcoming",
@@ -144,7 +144,7 @@ const listItemArr1 = [
     }
   }
 
-  const ColsData1= [
+  const ColsData2= [
     {
       colText: "Coin",
       isHourStatusBox: true
@@ -175,7 +175,7 @@ const listItemArr1 = [
     }
   ]
 
-  const ColsData2= [
+  const ColsData3= [
     {
       colText: "Miner",
       isHourStatusBox: true
@@ -206,7 +206,7 @@ const listItemArr1 = [
     }
   ]
 
-  const ColsData3= [
+  const ColsData4= [
     {
       colText: "Miner",
       isHourStatusBox: false
@@ -238,152 +238,6 @@ const listItemArr1 = [
   ]
 
 
-  const rowsData1 = [
-    {
-      col1avatarPath: "avatartwo.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgtwo.png",
-      mainTitle: "Doge",
-      subTitle: "DOGE",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarthree.png",
-      col3imgPath: "colthreeimgtwo.png",
-      col7imgPath: "colsevenimgthree.png",
-      mainTitle: "Elon",
-      subTitle: "ELON",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarfour.png",
-      col3imgPath: "colthreeimgthree.png",
-      col7imgPath: "colsevenimgfour.png",
-      mainTitle: "Bart's Farm Frens",
-      subTitle: "BFFS",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarfive.png",
-      col3imgPath: "colthreeimgtwo.png",
-      col7imgPath: "colsevenimgfifth.png",
-      mainTitle: "Yagiverse Genesis",
-      subTitle: "YGGN",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarsix.png",
-      col3imgPath: "colthreeimgtwo.png",
-      col7imgPath: "colsevenimgsixth.png",
-      mainTitle: "MetalCore Infantry Genesis",
-      subTitle: "MCIG",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarseven.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgseventh.png",
-      mainTitle: "Art Not Real",
-      subTitle: "ANRL",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatareight.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgeight.png",
-      mainTitle: "PG: JIRAVERSE",
-      subTitle: "PGJS",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarnine.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgnine.png",
-      mainTitle: "Tycoon Tigers Club",
-      subTitle: "TTCB",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatartenth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgtenth.png",
-      mainTitle: "Cosmic Trippies",
-      subTitle: "CSTS",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatareleventh.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgeleventh.png",
-      mainTitle: "BoredAIClub",
-      subTitle: "BAIC",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatartwelevth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgtwelevth.png",
-      mainTitle: "Moonthers NFT",
-      subTitle: "MNFT",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarthirteenth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgthirteenth.png",
-      mainTitle: "ThunderBuddiez",
-      subTitle: "TDBZ",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarfourteenth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgfourteenth.png",
-      mainTitle: "Surf The Kali Yuga 42",
-      subTitle: "SK42",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarfifteenth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgtfifteenth.png",
-      mainTitle: "0xTheSaudis Official",
-      subTitle: "0xSO",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarsixteenth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgsixteenth.png",
-      mainTitle: "Superful - Superuser Genesis Pass",
-      subTitle: "SSGP",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-    {
-      col1avatarPath: "avatarseventeenth.png",
-      col3imgPath: "colthreeimgone.png",
-      col7imgPath: "colsevenimgone.png",
-      mainTitle: "BozzCatz",
-      subTitle: "BZCT",
-      percentageText1: "80.5%",
-      percentageText2: "-10.4%",
-    },
-  ]
   const rowsData2 = [
     {
       col1avatarPath: "avatartwo.png",
@@ -391,7 +245,7 @@ const listItemArr1 = [
       col7imgPath: "colsevenimgtwo.png",
       mainTitle: "Doge",
       subTitle: "DOGE",
-      percentageText1: "70.5%",
+      percentageText1: "80.5%",
       percentageText2: "-10.4%",
     },
     {
@@ -400,7 +254,7 @@ const listItemArr1 = [
       col7imgPath: "colsevenimgthree.png",
       mainTitle: "Elon",
       subTitle: "ELON",
-      percentageText1: "69.5%",
+      percentageText1: "80.5%",
       percentageText2: "-10.4%",
     },
     {
@@ -676,6 +530,156 @@ const listItemArr1 = [
       percentageText2: "-10.4%",
     },
   ]
+  const rowsData4 = [
+    {
+      col1avatarPath: "avatartwo.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgtwo.png",
+      mainTitle: "Doge",
+      subTitle: "DOGE",
+      percentageText1: "70.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarthree.png",
+      col3imgPath: "colthreeimgtwo.png",
+      col7imgPath: "colsevenimgthree.png",
+      mainTitle: "Elon",
+      subTitle: "ELON",
+      percentageText1: "69.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarfour.png",
+      col3imgPath: "colthreeimgthree.png",
+      col7imgPath: "colsevenimgfour.png",
+      mainTitle: "Bart's Farm Frens",
+      subTitle: "BFFS",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarfive.png",
+      col3imgPath: "colthreeimgtwo.png",
+      col7imgPath: "colsevenimgfifth.png",
+      mainTitle: "Yagiverse Genesis",
+      subTitle: "YGGN",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarsix.png",
+      col3imgPath: "colthreeimgtwo.png",
+      col7imgPath: "colsevenimgsixth.png",
+      mainTitle: "MetalCore Infantry Genesis",
+      subTitle: "MCIG",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarseven.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgseventh.png",
+      mainTitle: "Art Not Real",
+      subTitle: "ANRL",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatareight.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgeight.png",
+      mainTitle: "PG: JIRAVERSE",
+      subTitle: "PGJS",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarnine.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgnine.png",
+      mainTitle: "Tycoon Tigers Club",
+      subTitle: "TTCB",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatartenth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgtenth.png",
+      mainTitle: "Cosmic Trippies",
+      subTitle: "CSTS",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatareleventh.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgeleventh.png",
+      mainTitle: "BoredAIClub",
+      subTitle: "BAIC",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatartwelevth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgtwelevth.png",
+      mainTitle: "Moonthers NFT",
+      subTitle: "MNFT",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarthirteenth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgthirteenth.png",
+      mainTitle: "ThunderBuddiez",
+      subTitle: "TDBZ",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarfourteenth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgfourteenth.png",
+      mainTitle: "Surf The Kali Yuga 42",
+      subTitle: "SK42",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarfifteenth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgtfifteenth.png",
+      mainTitle: "0xTheSaudis Official",
+      subTitle: "0xSO",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarsixteenth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgsixteenth.png",
+      mainTitle: "Superful - Superuser Genesis Pass",
+      subTitle: "SSGP",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+    {
+      col1avatarPath: "avatarseventeenth.png",
+      col3imgPath: "colthreeimgone.png",
+      col7imgPath: "colsevenimgone.png",
+      mainTitle: "BozzCatz",
+      subTitle: "BZCT",
+      percentageText1: "80.5%",
+      percentageText2: "-10.4%",
+    },
+  ]
+
+  const screen2 = 2;
+  const screen3 = 3;
+  const screen4 = 4;
 
   module.exports = {
     listItemArr1,
@@ -684,18 +688,21 @@ const listItemArr1 = [
     titleText2,
     listItemArr3,
     titleText3,
-    mainContentTitle1,
     mainContentTitle2,
     mainContentTitle3,
-    filterButtonOneText,
+    mainContentTitle4,
     filterButtonTwoText,
-    filterButtonThree,
-    ColsData1,
+    filterButtonThreeText,
+    filterButtonFourText,
     ColsData2,
     ColsData3,
-    rowsData1,
+    ColsData4,
     rowsData2,
     rowsData3,
+    rowsData4,
+    screen2,
+    screen3,
+    screen4,
   }
 
 

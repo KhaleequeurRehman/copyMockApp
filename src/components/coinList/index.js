@@ -9,6 +9,7 @@ import riskRatingIcon from "../../assets/images/riskRatingIcon.png"
 import SevenDVolIcon from "../../assets/images/SevenDVolIcon.png"
 import fishIcon from "../../assets/images/fishIcon.png"
 import vector2 from "../../assets/images/vector2.png"
+import PaginationCmp from "../pagination"
 
 const CoinList = ({ColsData,screen, rowsData}) => {
   return (
@@ -19,7 +20,7 @@ const CoinList = ({ColsData,screen, rowsData}) => {
             {
               ColsData && ColsData.map((currentItem,i) => (
                 i===0? (
-                    <div className={cn(styles.thItem)}>
+                    <div className={cn(styles.thItem)} key={i}>
                         <span>{currentItem.colText}</span>
                         <div style={{display: `${currentItem.isHourStatusBox === true ? "block" : "none"}`}}>
                         <p>
@@ -31,45 +32,13 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                 )
                 :
                 (
-                  <div className={cn(styles.thItem)}>
+                  <div className={cn(styles.thItem)} key={i}>
                      <span>{currentItem.colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${currentItem.isColIcon === true ? "block" : "none"}`}} />
                    </div>
                 )
                   
               ))
             }
-            {/* {Array.from({ length: 6 }).map((_, index) => (
-                <div className={cn(styles.thItem)} key={index}>
-                  <span>Table heading</span>
-                </div>
-              ))} */}
-              {/* <div className={cn(styles.thItem)}>
-                <span>{ColsData[0].colText}</span>
-                  <div style={{display: `${isHourStatus === true ? "block" : "none"}`}}>
-                    <p>
-                      <button>1H</button>
-                      <button>24H</button>
-                    </p> 
-                  </div>
-              </div>
-              <div className={cn(styles.thItem)}>
-                <span>{ColsData[1].colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${ColsData[1].isColIcon === true ? "block" : "none"}`}} />
-              </div>
-              <div className={cn(styles.thItem)}>
-                <span>{ColsData[2].colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${ColsData[2].isColIcon === true ? "block" : "none"}`}} />
-              </div>
-              <div className={cn(styles.thItem)}>
-                <span>{ColsData[3].colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${ColsData[3].isColIcon === true ? "block" : "none"}`}} />
-              </div>
-              <div className={cn(styles.thItem)}>
-                <span>{ColsData[4].colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${ColsData[4].isColIcon === true ? "block" : "none"}`}} />
-              </div>
-              <div className={cn(styles.thItem)}>
-                <span>{ColsData[5].colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${ColsData[5].isColIcon === true ? "block" : "none"}`}} />
-              </div>
-              <div className={cn(styles.thItem)}>
-                <span>{ColsData[6].colText}</span> <FontAwesomeIcon icon={faCircleInfo} style={{display: `${ColsData[6].isColIcon === true ? "block" : "none"}`}} />
-              </div> */}
           </li>
           {
             screen === 2 ?
@@ -199,6 +168,7 @@ const CoinList = ({ColsData,screen, rowsData}) => {
             </> 
             : screen === 4? 
              <>
+                {/* first row for desktop 4 start from here */}
                   <li className={cn(styles.coinListRow)}>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_first)}>
@@ -218,216 +188,39 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                   </div>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_second)}>
-                      {/* <span>0.11$</span> */}
                       <img src={vector2} alt="vector2" />
                     </div>
                   </div>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_third)}>
                       <span style={{color:"#0066FF"}}>1 / 5</span>
-                        {/* <img src={chainIcon} alt="chainIcon" />
-                        <FontAwesomeIcon icon={faEllipsisVertical}  /> */}
                     </div>
                   </div>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_fourth)}>
-                      {/* <span>10 M</span> */}
                       <span style={{color:"#F3F5F8"}}>5%</span>
                     </div>
                   </div>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_fifth)}>
-                      {/* <img src={riskRatingIcon} alt="riskRatingIcon" /> */}
                       <span>N/A</span>
                     </div>
                   </div>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_sixth)}>
-                      {/* <span>2.4K</span> */}
                       <img src={riskRatingIcon} alt="riskRatingIcon" />
                       <img src={fishIcon} style={{minWidth: "22px",marginLeft: "6px"}} alt="fishIcon" />
                     </div>
                   </div>
                   <div className={cn(styles.tdItem)}>
                     <div className={cn(styles.col_seventh)}>
-                      {/* <img src={SevenDVolIcon} alt="SevenDVolIcon" /> */}
                     </div>
                   </div>
               </li>
              </> 
             : ""
           }
-          {/* first row for desktop 2 start from here */}
-          {/* <li className={cn(styles.coinListRow)}>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_first)}>
-                      <div className={cn(styles.avatar_wrapper)}>
-                        <img src={avatarone} alt="avatarpic" />
-                      </div>
-                      <div className={cn(styles.content_wrapper)}>
-                        <div className={cn(styles.title_wrapper)}>
-                          <span className={cn(styles.main_title)}>Sahib</span>
-                          <span className={cn(styles.sub_title)}>SHIB</span>
-                        </div>
-                        <div className={cn(styles.body_wrapper)}>
-                          <div className={cn(styles.status_detail_box1)}>
-                            <FontAwesomeIcon icon={faCaretUp} />
-                            <span>1H</span>
-                            <span>80.5%</span>
-                          </div>
-                          <div className={cn(styles.status_detail_box2)}>
-                            <FontAwesomeIcon icon={faCaretDown} />
-                            <span>24H</span>
-                            <span>-10.4%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_second)}>
-                      <span>0.11$</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_third)}>
-                        <img src={chainIcon} alt="chainIcon" />
-                        <FontAwesomeIcon icon={faEllipsisVertical}  />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fourth)}>
-                      <span>10 M</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fifth)}>
-                      <img src={riskRatingIcon} alt="riskRatingIcon" />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_sixth)}>
-                      <span>2.4K</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_seventh)}>
-                      <img src={SevenDVolIcon} alt="SevenDVolIcon" />
-                    </div>
-                  </div>
-              </li> */}
-              
-              {/* first row for desktop 3 start from here */}
-              {/* <li className={cn(styles.coinListRow)}>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_first)}>
-                      <div className={cn(styles.avatar_wrapper)}>
-                        <img src={avatarone} alt="avatarpic" />
-                      </div>
-                      <div className={cn(styles.content_wrapper)}>
-                        <div className={cn(styles.title_wrapper)}>
-                          <span className={cn(styles.main_title)}>Sahib</span>
-                          <span className={cn(styles.sub_title)}>SHIB</span>
-                        </div>
-                        <div className={cn(styles.body_wrapper)}>
-                          <div className={cn(styles.status_detail_box1)}>
-                            <FontAwesomeIcon icon={faCaretUp} />
-                            <span>1H</span>
-                            <span>80.5%</span>
-                          </div>
-                          <div className={cn(styles.status_detail_box2)}>
-                            <FontAwesomeIcon icon={faCaretDown} />
-                            <span>24H</span>
-                            <span>-10.4%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_second)}>
-                      <span>100,230 $</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_third)}>
-                        <img src={chainIcon} alt="chainIcon" />
-                        <FontAwesomeIcon icon={faEllipsisVertical}  />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fourth)}>
-                      <span>1 / 5 </span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fifth)}>
-                      <span>5%</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_sixth)}>
-                      <span>60 Days</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_seventh)}>
-                    <img src={riskRatingIcon} style={{minWidth: "36px"}} alt="riskRatingIcon" />
-                      <img src={fishIcon} style={{minWidth: "22px",marginLeft: "6px"}} alt="fishIcon" />
-                    </div>
-                  </div>
-              </li> */}
-
-            {/* first row for desktop 4 start from here */}
-            {/* <li className={cn(styles.coinListRow)}>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_first)}>
-                      <div className={cn(styles.avatar_wrapper)}>
-                        <img src={avatarone} alt="avatarpic" />
-                      </div>
-                      <div className={cn(styles.content_wrapper)}>
-                        <div className={cn(styles.title_wrapper)}>
-                          <span className={cn(styles.main_title)}>Sahib</span>
-                          <span className={cn(styles.sub_title)}>BUSD</span>
-                        </div>
-                        <div className={cn(styles.body_wrapper)}>
-                          <span className={cn(styles.status_badge)}> 1d 8h 30m</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_second)}>
-                      <img src={vector2} alt="vector2" />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_third)}>
-                      <span style={{color:"#0066FF"}}>1 / 5</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fourth)}>
-                      <span style={{color:"#F3F5F8"}}>5%</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fifth)}>
-                      <span>N/A</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_sixth)}>
-                      <img src={riskRatingIcon} alt="riskRatingIcon" />
-                      <img src={fishIcon} style={{minWidth: "22px",marginLeft: "6px"}} alt="fishIcon" />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_seventh)}>
-                    </div>
-                  </div>
-              </li> */}
-
+          
             {
               rowsData.map((v,i) => (
                 <>
@@ -492,71 +285,8 @@ const CoinList = ({ColsData,screen, rowsData}) => {
                 </>
               ))
             }
-
-
-          {/* {Array.from({ length: 6 }).map((_, index) => (
-            <>
-              <li key={index} className={cn(styles.coinListRow)}>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_first)}>
-                      <div className={cn(styles.avatar_wrapper)}>
-                        <img src={require(`../../assets/images/${rowsData.col1avatarPath}`)} alt="avatarpic" />
-                      </div>
-                      <div className={cn(styles.content_wrapper)}>
-                        <div className={cn(styles.title_wrapper)}>
-                          <span className={cn(styles.main_title)}>Sahib</span>
-                          <span className={cn(styles.sub_title)}>SHIB</span>
-                        </div>
-                        <div className={cn(styles.body_wrapper)}>
-                          <div className={cn(styles.status_detail_box1)}>
-                            <FontAwesomeIcon icon={faCaretUp} />
-                            <span>1H</span>
-                            <span>80.5%</span>
-                          </div>
-                          <div className={cn(styles.status_detail_box2)}>
-                            <FontAwesomeIcon icon={faCaretDown} />
-                            <span>24H</span>
-                            <span>-10.4%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_second)}>
-                      <span>0.11$</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_third)}>
-                        <img src={chainIcon} alt="chainIcon" />
-                        <FontAwesomeIcon icon={faEllipsisVertical}  />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fourth)}>
-                      <span>10 M</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_fifth)}>
-                      <img src={riskRatingIcon} alt="riskRatingIcon" />
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_sixth)}>
-                      <span>2.4K</span>
-                    </div>
-                  </div>
-                  <div className={cn(styles.tdItem)}>
-                    <div className={cn(styles.col_seventh)}>
-                      <img src={SevenDVolIcon} alt="SevenDVolIcon" />
-                    </div>
-                  </div>
-              </li>
-            </>
-          ))} */}
         </ul>
+        <PaginationCmp />
       </div>
     </>
   );
@@ -565,33 +295,29 @@ const CoinList = ({ColsData,screen, rowsData}) => {
 export default CoinList;
 
 
-  /* <th>
-                <span>Coin</span>
-                <div>
-                  <span>
-                    <Badge bg="secondary">1H</Badge>
-                  </span>
-                  <span>
-                    <Badge bg="secondary">24H</Badge>
-                  </span>
-                </div>
-              </th>
-              <th>
-                <span>Price</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Chain</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Market cap</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Risk Rating</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>Volume</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th>
-              <th>
-                <span>7d Vol</span> <FontAwesomeIcon icon={faCircleInfo} />
-              </th> */
 
+
+
+// function AdvancedExample() {
+//   return (
+//     <Pagination>
+//       <Pagination.First />
+//       <Pagination.Prev />
+//       <Pagination.Item>{1}</Pagination.Item>
+//       <Pagination.Ellipsis />
+
+//       <Pagination.Item>{10}</Pagination.Item>
+//       <Pagination.Item>{11}</Pagination.Item>
+//       <Pagination.Item active>{12}</Pagination.Item>
+//       <Pagination.Item>{13}</Pagination.Item>
+//       <Pagination.Item disabled>{14}</Pagination.Item>
+
+//       <Pagination.Ellipsis />
+//       <Pagination.Item>{20}</Pagination.Item>
+//       <Pagination.Next />
+//       <Pagination.Last />
+//     </Pagination>
+//   );
+// }
+
+// export default AdvancedExample;

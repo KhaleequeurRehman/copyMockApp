@@ -14,7 +14,7 @@ const List = ({titleText,listItemArr}) => {
         <div className={cn(styles.listBody)}>
             <ul>
                 {
-                    listItemArr.map(listItem => (<li><Link to={listItem.link}>{listItem.text}</Link></li>))
+                    listItemArr.map((listItem,i) => (<li key={i}><Link to={listItem.link}>{listItem.text}</Link></li>))
                 }
             </ul>
         </div>
