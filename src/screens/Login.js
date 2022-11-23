@@ -17,34 +17,33 @@ const Login = () => {
       password: passwordForLogin,
     })
 
-    // await axios
-    //   .post(
-    //     // "http://localhost:8000/api/v1/login/admin",
-    //     "https://cgc-ecommerce-app.herokuapp.com/api/v1/login/admin",
-    //     // "https://yourposhub.com/api/v1/login/admin",
-    //     // http://35.154.23.158:4000
-    //     //http://35.154.23.158:4000/api/v1/login/admin,
-    //     { email:"test@test.com", password:"test@1234" } ,
-    //     {
-    //       headers: { "Content-Type": "application/json" },
-    //       withCredentials: true,
-    //     }
-    //   )
-    //   .then((res) => console.log(res));
-
-        const requestOptions1 = {
-          mode: 'no-cors',
-          method: "POST",
+    await axios
+      .post(
+        "http://localhost:8000/api/v1/login/admin",
+        // "https://cgc-ecommerce-app.herokuapp.com/api/v1/login/admin",
+        // "https://yourposhub.com/api/v1/login/admin",
+        // http://35.154.23.158:4000
+        //http://35.154.23.158:4000/api/v1/login/admin,
+        { email:emailForLogin, password:passwordForLogin } ,
+        {
           headers: { "Content-Type": "application/json" },
-          credentials: 'same-origin',
-          body: JSON.stringify({
-            email: emailForLogin,
-            password: passwordForLogin,
-          }),
-        };
+          withCredentials: true,
+        }
+      )
+      .then((res) => console.log(res));
+
+        // const requestOptions1 = {
+        //   // mode: 'no-cors',
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify({
+        //     email: emailForLogin,
+        //     password: passwordForLogin,
+        //   }),
+        // };
       // await fetch("https://yourposhub.com/api/v1/login/admin",requestOptions).then((res) => console.log(res));
-      // await fetch("http://localhost:8000/api/v1/login/admin",requestOptions).then((res) => console.log(res));
-      await fetch("https://cgc-ecommerce-app.herokuapp.com/api/v1/login/admin",requestOptions1).then((res) => console.log(res));
+      // await fetch("http://localhost:8000/api/v1/login/admin",requestOptions1).then((res) => console.log(res));
+      // await fetch("https://cgc-ecommerce-app.herokuapp.com/api/v1/login/admin",requestOptions1).then((res) => console.log(res));
   };
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
@@ -53,42 +52,39 @@ const Login = () => {
       email: emailForRegister,
       password: passwordForRegister,
     })
-    // await axios
-    //   .post(
-    //     "http://localhost:8000/api/v1/register/admin",
-    //     // "https://yourposhub.com/api/v1/register/admin",
-    //     // http://35.154.23.158:4000
-    //     //http://35.154.23.158:4000/api/v1/register/admin
-    //     // {
-    //     //   email: "test@test.com",
-    //     //   password: "test@1234",
-    //     // },
-    //     { username:"testuser", email:"test@test.com", password:"test@1234" } ,
-    //     {
-    //       headers: { "Content-Type": "application/json" },
-    //       withCredentials: true,
-    //     }
-    //   )
-    //   .then((res) => console.log(res));
 
-        const requestOptions2 = {
-          mode: 'no-cors',
-          method: "POST",
+    await axios
+      .post(
+        "https://cgc-ecommerce-app.herokuapp.com/api/v1/register/admin",
+        // "http://localhost:8000/api/v1/register/admin",
+        // "https://yourposhub.com/api/v1/register/admin",
+        // http://35.154.23.158:4000
+        //http://35.154.23.158:4000/api/v1/register/admin
+        { username:username, email:emailForRegister, password:passwordForRegister } ,
+        {
           headers: { "Content-Type": "application/json" },
-          // body: JSON.stringify({
-          //   email: "test@test.com",
-          //   password: "test@1234",
-          // }),
-          credentials: 'same-origin',
-          body: JSON.stringify({
-            username:username,
-            email: emailForRegister,
-            password: passwordForRegister,
-          }),
-        };
-      // await fetch("https://yourposhub.com/api/v1/login/admin",requestOptions).then((res) => console.log(res));
-      // await fetch("http://localhost:8000/api/v1/register/admin",requestOptions).then((res) => console.log(res));
-      await fetch("https://cgc-ecommerce-app.herokuapp.com/api/v1/register/admin",requestOptions2).then((res) => console.log(res));
+          withCredentials: true,
+        }
+      )
+      .then((res) => console.log(res));
+
+      //   const requestOptions2 = {
+      //     // mode: 'no-cors',
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     // body: JSON.stringify({
+      //     //   email: "test@test.com",
+      //     //   password: "test@1234",
+      //     // }),
+      //     body: JSON.stringify({
+      //       username:username,
+      //       email: emailForRegister,
+      //       password: passwordForRegister,
+      //     }),
+      //   };
+      // // await fetch("https://yourposhub.com/api/v1/login/admin",requestOptions).then((res) => console.log(res));
+      // await fetch("http://localhost:8000/api/v1/register/admin",requestOptions2).then((res) => console.log(res));
+      // // await fetch("https://cgc-ecommerce-app.herokuapp.com/api/v1/register/admin",requestOptions2).then((res) => console.log(res));
   };
 
   return (
@@ -127,7 +123,7 @@ const Login = () => {
           placeholder="enter password" value={passwordForLogin}
           onChange={(e) => setPasswordForLogin(e.target.value)}
         /><br />
-        <button type="submit">register</button>
+        <button type="submit">login</button>
       </form>
     </div>
     </>
