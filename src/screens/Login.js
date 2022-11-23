@@ -19,8 +19,8 @@ const Login = () => {
 
     await axios
       .post(
-        "http://localhost:8000/api/v1/login/admin",
-        // "https://cgc-ecommerce-app.herokuapp.com/api/v1/login/admin",
+        // "http://localhost:8000/api/v1/login/admin",
+        "https://cgc-ecommerce-app.herokuapp.com/api/v1/login/admin",
         // "https://yourposhub.com/api/v1/login/admin",
         // http://35.154.23.158:4000
         //http://35.154.23.158:4000/api/v1/login/admin,
