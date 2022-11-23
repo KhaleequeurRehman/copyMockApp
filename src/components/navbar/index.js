@@ -31,7 +31,7 @@ const NavbarCmp = () => {
               <Nav.Link><Link to="/">Tokens</Link></Nav.Link>
               <Nav.Link><Link to="/desktop3">Miners</Link></Nav.Link>
               <Nav.Link><Link to="/desktop4">NFT</Link></Nav.Link>
-              <Nav.Link><Link to="#Contactus">Contact us</Link></Nav.Link>
+              <Nav.Link><Link to="/login">Contact us</Link></Nav.Link>
             </Nav>
             <Form className="d-sm-none">
               <Form.Control
