@@ -26,8 +26,7 @@ const Login = () => {
         //http://35.154.23.158:4000/api/v1/login/admin,
         { email:emailForLogin, password:passwordForLogin } ,
         {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true,
+          headers: { "Content-Type": "application/json", withCredentials: true, },
         }
       )
       .then((res) => console.log(res));
@@ -62,8 +61,7 @@ const Login = () => {
         //http://35.154.23.158:4000/api/v1/register/admin
         { username:username, email:emailForRegister, password:passwordForRegister } ,
         {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true,
+          headers: { "Content-Type": "application/json",withCredentials: true, },
         }
       )
       .then((res) => console.log(res));
